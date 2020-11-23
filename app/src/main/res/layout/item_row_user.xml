@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="0dp"
+    style="@style/parentViewBackground">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#0abde3"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_html_url"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_name" />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="25dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_item_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_html_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="25dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="@string/user_html_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_html_url"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_html_url"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_html_url" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

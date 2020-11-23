@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+
+    <SwitchPreference
+        android:icon="@drawable/ic_baseline_access_alarm_black_24dp"
+        android:defaultValue="false"
+        android:key="@string/key_reminder_setting"
+        android:title="@string/reminder_setting"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        android:icon="@drawable/ic_baseline_g_translate_black_24dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:key="@string/key_language_setting"
+        android:summary="@string/nothing"
+        android:title="@string/language_setting"
+        app:iconSpaceReserved="false" />
+
+</PreferenceScreen>

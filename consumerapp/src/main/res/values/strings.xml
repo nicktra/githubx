@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Consumer App GithubX</string>
+    <string name="user_name">user_name</string>
+    <string name="user_html_url">user_html_url</string>
+    <string name="search_user_info">Type github user on search bar</string>
+
+    <string name="settings">Settings</string>
+    <string name="language_setting">Select Language</string>
+    <string name="key_language_setting">language</string>
+    <string name="nothing">Nothing</string>
+    <string name="reminder_setting">Reminder at 9.00 AM</string>
+    <string name="key_reminder_setting">reminder</string>
+    <string name="reminder">Good Morning, Let\'s find github user on GithubX</string>
+
+    <string name="about">About</string>
+    <string name="data_user_name">data_github_name</string>
+    <string name="data_user_company">data_github_company</string>
+    <string name="share">share</string>
+    <string name="profile_name">Konik Saputra</string>
+    <string name="profile_address">Tangerang Selatan, INA</string>
+    <string name="profile_label_email">Email</string>
+    <string name="profile_name_email">koniksaputra@live.com</string>
+    <string name="profile_label_instagram">Instagram</string>
+    <string name="profile_name_instagram">instagram.com/koniksaputra</string>
+    <string name="profile_label_twitter">Twitter</string>
+    <string name="profile_name_twitter">twitter.com/koniksaputra</string>
+    <string name="profile_label_facebook">Facebook</string>
+    <string name="profile_name_facebook">facebook.com/koniksaputra</string>
+    <string name="data_user_repository">data_user_repository</string>
+    <string name="data_user_follower">data_user_follower</string>
+    <string name="data_user_following">data_user_following</string>
+    <string name="data_user_username">data_user_username</string>
+    <string name="data_user_location">data_user_location</string>
+    <string name="label_repository">Repository</string>
+    <string name="label_follower">Follower</string>
+    <string name="label_following">Following</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Input Username</string>
+    <string name="placeholder_search">Welcome to GithubX\nSearch Github user around the world</string>
+
+    <string name="tab_text_1">Follower</string>
+    <string name="tab_text_2">Following</string>
+    <string name="favorite">Favorite</string>
+    <string name="empty_favorite">No Favorite Saved</string>
+</resources>
