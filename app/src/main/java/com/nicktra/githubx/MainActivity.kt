@@ -75,8 +75,6 @@ class MainActivity : AppCompatActivity() {
                 // Jika koneksi berhasil
                 list.clear()
                 progressBar.visibility = View.INVISIBLE
-                img_placeholder_search.visibility = View.INVISIBLE
-                tv_placeholder_search.visibility = View.INVISIBLE
 
                 // Parsing JSON
                 val result = String(responseBody)
@@ -85,19 +83,32 @@ class MainActivity : AppCompatActivity() {
                     val responseObject = JSONObject(result)
                     val items = responseObject.getJSONArray("items")
 
-                    for (i in 0 until items.length()) {
-                        val item = items.getJSONObject(i)
+                    if(items.length() > 0) {
+                        img_placeholder_search.visibility = View.INVISIBLE
+                        tv_placeholder_search.visibility = View.INVISIBLE
+                        for (i in 0 until items.length()) {
+                            val item = items.getJSONObject(i)
 
-                        val username = item.getString("login")
-                        val avatar = item.getString("avatar_url")
-                        val userId = item.getString("id")
-                        val url = item.getString("url")
-                        val htmlUrl = item.getString("html_url")
+                            val username = item.getString("login")
+                            val avatar = item.getString("avatar_url")
+                            val userId = item.getString("id")
+                            val url = item.getString("url")
+                            val htmlUrl = item.getString("html_url")
 
-                        val newUser = User(username, avatar, userId, url, htmlUrl)
-                        list.add(newUser)
+                            val newUser = User(username, avatar, userId, url, htmlUrl)
+                            list.add(newUser)
+                        }
+                        rv_users.visibility = View.VISIBLE
+                        showRecyclerList()
+
+                    } else {
+                        rv_users.visibility = View.INVISIBLE
+                        img_placeholder_search.visibility = View.VISIBLE
+                        tv_placeholder_search.visibility = View.VISIBLE
+                        
+                        val notFoundUserMessage = "User Not Found"
+                        Toast.makeText(this@MainActivity, notFoundUserMessage, Toast.LENGTH_SHORT).show()
                     }
-                    showRecyclerList()
 
                 } catch (e: Exception) {
                     Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_SHORT).show()
